@@ -229,6 +229,7 @@ var addUrlToWindowTitle = (function() {
 		if(useOriginalTitle === true){ 
 			document.title = titleFormatter(originalTitle);
 		}else if(document.title.indexOf( sanitizer(addedUrl) ) < 0){
+			originalTitle = '' + document.title;
 			document.title = titleFormatter(document.title);
 		}
     
